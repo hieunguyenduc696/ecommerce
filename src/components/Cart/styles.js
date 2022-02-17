@@ -6,9 +6,16 @@ export default makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginTop: '20px'
+        marginTop: '80px'
     },
     emptyButton: {
         marginRight: '20px',
+    }, 
+    container: {
+        padding: '4rem 3rem'
+    },
+    link: {
+        textDecoration: 'none',
+        color: theme.palette.grey
     }
 }))

@@ -14,11 +14,14 @@ export default makeStyles(() => ({
     logo: {
         display: 'flex',
         alignItems: 'center',
+        color: 'black',
+        textDecoration: 'none'
     },
     imageWrapper: {
         width: '40px',
         height: '40px',
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        marginRight: '10px'
     },
     image: {
         width: '100%',
@@ -28,4 +31,7 @@ export default makeStyles(() => ({
     iconButton: {
 
     },
+    badge: {
+        color: 'unset'
+    }
 }));

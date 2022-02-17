@@ -21,6 +21,9 @@ export default makeStyles((theme) => ({
             fontSize: '20px'
         }
     },
+    quantity: {
+        margin: '0 5px'
+    },
     actions: {
         display: 'flex',
         alignItems: 'center',
