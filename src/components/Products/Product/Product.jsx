@@ -7,14 +7,14 @@ import useStyles from './styles'
 const Product = ({ product }) => {
   const classes = useStyles()
   return (
-      <Card>
-          <CardMedia className={classes.media} image={product.image} alt={product.name} />
+      <Card style={{ height: '100%' }}>
+          <CardMedia className={classes.media} image={product.image.url} alt={product.name} />
           <CardContent className={classes.cardContent}>
               <div className={classes.info}>
-                <Typography variant="h5" gutterBottom>{product.name}</Typography>
-                <Typography variant="h5">{product.price}</Typography>
+                <Typography variant="h5" gutterBottom>{product.name.length > 15 ? `${product.name.substring(0, 15)}...` : product.name}</Typography>
+                <Typography variant="h5" gutterBottom>{product.price.formatted_with_symbol}</Typography>
               </div>
-              <Typography variant="body2" color="textSecondary">{product.description}</Typography>
+              <Typography dangerouslySetInnerHTML={{__html: product.description}} variant="body2" color="textSecondary" />
           </CardContent>
           <CardActions className={classes.cardActions}>
               <IconButton>

@@ -8,7 +8,8 @@ export default makeStyles(() => ({
         paddingTop: '56.25%'
     },
     cardContent: {
-
+        display: 'flex',
+        flexDirection: 'column'
     },
     info: {
         display: 'flex',
