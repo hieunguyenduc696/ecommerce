@@ -5,7 +5,7 @@ import Product from './Product/Product'
 
 import useStyles from './styles'
 
-const Products = ({ products }) => {
+const Products = ({ products, handleAddToCart }) => {
   const classes = useStyles()  
   return (
       <>
@@ -13,7 +13,7 @@ const Products = ({ products }) => {
         <Grid container style={{ width: '100%', margin: '0 auto' }} spacing={3} className={classes.productContainer}>
             {products.map(product => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
-                    <Product product={product} />
+                    <Product product={product} handleAddToCart={handleAddToCart} />
                 </Grid>
             ))}
         </Grid>

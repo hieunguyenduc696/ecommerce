@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
     media: {
         width: '100%',
         objectFit: 'cover',
@@ -14,8 +14,18 @@ export default makeStyles(() => ({
     info: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        maxHeight: '50px'
     },
+    title: {
+        [theme.breakpoints.down('lg')]: {
+            fontSize: '22px'
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: '20px'
+        }
+
+    }, 
     cardActions: {
         display: 'flex',
         justifyContent: 'flex-end',
