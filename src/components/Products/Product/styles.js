@@ -24,7 +24,6 @@ export default makeStyles((theme) => ({
         [theme.breakpoints.down('md')]: {
             fontSize: '20px'
         }
-
     }, 
     cardActions: {
         display: 'flex',
