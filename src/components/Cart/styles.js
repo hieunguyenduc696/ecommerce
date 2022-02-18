@@ -10,6 +10,11 @@ export default makeStyles((theme) => ({
     },
     emptyButton: {
         marginRight: '20px',
+        [theme.breakpoints.down('sm')]: {
+            marginRight: '0',
+            marginBottom: '10px',
+            fontSize: '12px'
+        }
     }, 
     container: {
         padding: '4rem 3rem'
