@@ -8,12 +8,17 @@ export default makeStyles((theme) => ({
         justifyContent: 'space-between',
         marginTop: '80px'
     },
+    cardActions: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
     emptyButton: {
         marginRight: '20px',
-        [theme.breakpoints.down('sm')]: {
-            marginRight: '0',
-            marginBottom: '10px',
-            fontSize: '12px'
+        [theme.breakpoints.down('xs')]: {
+            padding: '6px 18px',
+            fontSize: '14px',
+            fontWeight: '400'
         }
     }, 
     container: {

@@ -10,8 +10,10 @@ const App = () => {
   const [order, setOrder] = useState({})
   const [errorMessage, setErrorMessage] = useState('')
 
-  const fetchProducts = async () => {
-    const { data } = await commerce.products.list()
+  const fetchProducts = async (query = null) => {
+    const { data } = await commerce.products.list({
+      query: query,
+    })
     setProducts(data)
   }
 
@@ -54,6 +56,11 @@ const App = () => {
     }
   }
 
+  const handleSearch = (tags) => {
+    console.log(tags)
+    tags.length === 0 ? fetchProducts() : fetchProducts(tags.join(','))
+  }
+
   useEffect(() => {
     fetchProducts()
     fetchCart()
@@ -65,7 +72,7 @@ const App = () => {
         <Navbar totalItems={cart.total_items} />
         <Switch>
           <Route exact path="/">
-            <Products products={products} handleAddToCart={handleAddToCart} />
+            <Products onSearch={handleSearch} products={products} handleAddToCart={handleAddToCart} />
           </Route>
           <Route exact path="/cart">
             <Cart 

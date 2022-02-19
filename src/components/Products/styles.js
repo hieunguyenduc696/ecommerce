@@ -6,5 +6,22 @@ export default makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    search: {
+        margin: theme.spacing(2),
+        display: 'flex',
+        alignItems: 'center',
+    },
+    chipInput: {
+        // padding: theme.spacing(2)
+        [theme.breakpoints.up('sm')]: {
+            maxWidth: '400px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: 'auto'
+        },
+    },
+    searchBtn: {
+        marginLeft: '10px'
     }
 }));
